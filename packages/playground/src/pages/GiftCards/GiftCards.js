@@ -58,7 +58,7 @@ import '../../style.scss';
         environment: process.env.__CLIENT_ENV__,
         clientKey: process.env.__CLIENT_KEY__,
         session,
-        showPayButton: false,
+        showPayButton: true,
 
         // Events
         beforeSubmit: (data, component, actions) => {
@@ -93,8 +93,8 @@ import '../../style.scss';
         .create('giftcard', {
             type: 'giftcard',
             brand: 'svs',
-            onSubmit: () => {
-                afterGiftCard();
+            onPaymentCompleted: (result, component) => {
+                console.info(result, component);
             },
             onOrderCreated: () => {
                 afterGiftCard();
