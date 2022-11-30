@@ -19,6 +19,7 @@ import SecuredFields from './SecuredFields';
 import Sepa from './Sepa';
 import { ThreeDS2DeviceFingerprint, ThreeDS2Challenge } from './ThreeDS2';
 import WeChat from './WeChat';
+import PayNow from './PayNow';
 import BcmcMobile from './BcmcMobile';
 import { MolPayEBankingMY, MolPayEBankingTH, MolPayEBankingVN } from './MolPayEBanking';
 import Dragonpay from './Dragonpay';
@@ -55,6 +56,7 @@ import WalletINElement from './WalletIN';
 import OnlineBankingCZElement from './OnlineBankingCZ';
 import OnlineBankingSKElement from './OnlineBankingSK';
 import PayByBank from './PayByBank';
+import PromptPay from "./PromptPay";
 
 /**
  * Maps each component with a Component element.
@@ -196,6 +198,8 @@ const componentsMap = {
     swish: Swish,
     wechatpay: WeChat,
     wechatpayQR: WeChat,
+    promptpay: PromptPay,
+    paynow: PayNow,
     /** QRLoader */
 
     /** Await */
